@@ -1,9 +1,27 @@
+import { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import { AuthContext, AuthContextData } from 'AuthContext';
+import './assets/styles/custom.scss';
+import 'react-toastify/dist/ReactToastify.css';
+import Routes from './Routes';
 import './App.css';
 
-function App() {
+const App =() => {
+
+  const [authContextData, setAuthContextData] = useState<AuthContextData>({
+    authenticated: false
+  });
+
   return (
-    <h1>Hello Movieflix</h1>
+    <AuthContext.Provider value={{ authContextData, setAuthContextData }}>
+      <Routes />
+      <ToastContainer />
+    </AuthContext.Provider>
   );
 }
 
 export default App;
+
+
+
+

@@ -1,0 +1,53 @@
+.form-review-container {
+    display: block;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.input-review {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.input-review::placeholder {
+    text-align: left;
+    width: 100%;
+    color: #9E9E9E;
+    font-weight: normal;
+}
+
+.input-review:focus {
+    text-align: left;
+    width: 100%;
+    background-color: #fff;
+    color: #9E9E9E;
+}
+
+.btn-review {
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+
+    .form-review-container {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-review {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-review {
+        width: 334px;
+        font-weight: bold;
+    }
+    
+}

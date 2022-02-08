@@ -1,0 +1,21 @@
+.catalog-container {
+    font-size: 18px;
+    display: block;
+    justify-content: center;
+}
+
+.catalog-title-container  {
+    margin-bottom: 10px;
+}
+
+.catalog-title-container h1 {
+    font-size: 1.5em;
+    letter-spacing: -0.015;
+    color: #ffffff;
+}
+
+@media (min-width: 576px) {
+    .catalog-container {
+        font-size: 18px;
+    }
+}
