@@ -1,21 +1,32 @@
 .catalog-container {
+
     font-size: 18px;
     display: block;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.catalog-search-container  {
+    width: 310px;
+    height: 70px;
     justify-content: center;
+    padding-left: 10px;
 }
 
-.catalog-title-container  {
-    margin-bottom: 10px;
-}
-
-.catalog-title-container h1 {
-    font-size: 1.5em;
-    letter-spacing: -0.015;
-    color: #ffffff;
+.card-container {
+    padding-left: 10px;
 }
 
 @media (min-width: 576px) {
+    
     .catalog-container {
         font-size: 18px;
+        display: block;
+        justify-content: center;
     }
+
+    .catalog-search-container  {
+        width: 100%;
+    }    
+
 }

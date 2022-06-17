@@ -8,14 +8,15 @@ import { toast } from "react-toastify";
 type Props = {
     value?: boolean;
     placeholder?: string;
-    valueMovieId?: string;  
+    valueMovieId?: string;
+    onCreate: Function;
 }
 type FormState = {
     text: string;
     movieId: number;
     userId: number;
 }
-const FormReview = ({ value, placeholder, valueMovieId }: Props) => {
+const FormReview = ({ value, placeholder, valueMovieId, onCreate }: Props) => {
 
     const { register, handleSubmit, formState: {errors} } = useForm<FormState>();
     const  history = useHistory();
@@ -34,11 +35,9 @@ const FormReview = ({ value, placeholder, valueMovieId }: Props) => {
           data: payload
         })
             .then(() => {  
-                // document.location.reload();
+                onCreate();
                 toast.info('Obrigado pela avaliação!');
-                history.push('/movies');
             })
-
         }
     
     return(

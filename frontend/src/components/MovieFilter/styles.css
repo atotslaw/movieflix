@@ -1,0 +1,30 @@
+.movie-filter-container {
+    padding: 15px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+}
+
+.movie-filter-select__control {
+    font-size: 1em;
+    letter-spacing: -0.015em;
+    color: #263238;
+    border: none !important;
+    border-bottom: 1px solid #E1E1E1 !important;
+  }
+
+  .movie-filter-select__placeholder {
+    color: #9E9E9E !important;
+  }
+  
+  .movie-filter-select__indicator-separator {
+    display: none;
+  }
+
+@media (min-width: 576px) {
+
+    .movie-filter-container {
+        margin-bottom: 0;
+        flex: 1;
+
+    }
+}
