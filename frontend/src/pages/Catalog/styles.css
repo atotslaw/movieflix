@@ -14,8 +14,11 @@
 }
 
 .card-container {
+    align-content: center;
+    justify-items: center;
     padding-left: 10px;
 }
+
 
 @media (min-width: 576px) {
     
@@ -28,5 +31,11 @@
     .catalog-search-container  {
         width: 100%;
     }    
+
+    .card-container {
+        padding: 10px;
+    }
+    
+
 
 }

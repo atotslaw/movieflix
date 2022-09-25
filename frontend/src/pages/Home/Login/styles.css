@@ -1,5 +1,5 @@
 .login-card {
-    padding: 15px;
+    padding: 30px;
     width: 300px;
     height: 464px;
     align-content: center;
@@ -12,7 +12,7 @@
     letter-spacing: -0.015em;
     color: #FFFFFF;
     text-transform: uppercase;
-    margin-top: 70px;
+    margin-top: 80px;
     margin-bottom: 40px;
 }
 

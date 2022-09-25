@@ -1,11 +1,10 @@
 .home-container {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     padding: 20px 10px 33px 10px;
-    height: 517px;
+    height: 515px;
 }
-
 
 .home-card {
     display: flex;
@@ -17,51 +16,63 @@
     display: none;
 }
 
-.home-form-container {
-    width: 100%;
-}
-
 .home-content-container {
     width: 100%;
 }
 
 @media (min-width: 576px) {
 
-    .home-form-container {
-        height: 795px;
+    .home-container {
+        height: 610px;
+        padding-top: 40px;
+        margin-top: 20px;
+    }
+
+    .home-content-container {
+        height: 610px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .home-container {
+        margin-top: 40px;
     }
 }
 
+
 @media (min-width: 1200px) {
 
-    .home-container {
-        padding: 40px;
+    .home-card {
+        padding-top: 40px;
     }
     
     .home-banner-container {
         display: flex;
         flex-direction: column;
-        align-content: space-around;
+        align-items: center;
         margin-top: 40px;
-        width: 500px;
+        width: 450px;
     }
 
     .home-banner-container h1 {
         font-size: 40px;
         margin-bottom: 15px;
-        letter-spacing: -0.015em;;
+        letter-spacing: -0.015em;
         color: #263238;
     }
 
     .home-banner-container p {
         font-size: 18px;
-        letter-spacing: -0.015em;;
+        letter-spacing: -0.015em;
         color: #9e9e9e;
     }
 
     .home-banner-container svg {
         width: 100%;
     }
+
 }
 
 @media (min-width: 1400px) {
@@ -78,4 +89,5 @@
     .home-banner-container p {
         font-size: 24px;
     }
+
 }

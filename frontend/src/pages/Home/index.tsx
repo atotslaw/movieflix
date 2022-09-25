@@ -11,7 +11,7 @@ const Home = () => {
             <p className="home-banner-p text-white">Diga o que você achou do seu filme favorito.</p>
             <AuthImage />
         </div>
-        <div className="base-card home-card">
+        <div className="home-card">
           <div className="home-content-container">
               <Login />
           </div>
