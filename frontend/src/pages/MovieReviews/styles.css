@@ -6,6 +6,14 @@
 
 .movie-reviews-moviecard-container {
     width: 100%;
+    padding: 10px;
+    margin: 10px; 
+    margin-bottom: 0px; 
+
+    display: block;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .movie-reviews-title {

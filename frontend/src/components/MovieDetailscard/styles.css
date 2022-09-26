@@ -1,17 +1,20 @@
 .moviecard {
     margin-bottom: 10px;
-    width: 600px;
+    width: 300px;
     height: 100%;
+    display: block;
+    justify-content: center;
+    justify-items: center;
   }
   
   .moviecard-img-container {
     text-align: center;
-    padding: 15px 0 10px 0;
+    padding: 10px 0 10px 0;
   }
   
   .moviecard-img-container img {
-      width: 100%px;
-      height: 165px;
+      width: 260px;
+      height: 163px;
   }
   
   .moviecard-data-container {
@@ -35,12 +38,21 @@
     color: #ffffff;
   }
   
+  .moviecard-synopsis-container {
+    height: 250px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 4px;
+    border: solid 1px white;
+
+  }
+
   .moviecard-synopsis-container p {
     height:210px;
+    padding: 5px;
+    margin-bottom: 5px;
     font-size: 14px;
     color: #ffffff;
-    border-radius: 10px;
-    border: solid 1px white;
   }
   
     @media (min-width: 576px) {
