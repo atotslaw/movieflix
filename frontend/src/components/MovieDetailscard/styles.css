@@ -20,31 +20,33 @@
   .moviecard-data-container {
     display: flex;
     flex-direction: column;
-    margin: 10px 0 0 10px;
+    margin: 05px 0 0 10px;
   }
   
   .moviecard-data-container h5 {
     font-size: 20px;
     color: #ffffff;
-    margin-bottom: 5px;
+    margin: 0px 0px 0px 05px;
   }
   
   .moviecard-data-container h6 {
     font-size: 16px;
+    margin: 0px 0px 0px 05px;
   }
   
   .moviecard-data-container p {
     font-size: 14px;
     color: #ffffff;
+    margin: 0px 0px 0px 05px;
   }
   
   .moviecard-synopsis-container {
     height: 250px;
     font-size: 14px;
-    padding: 10px;
-    border-radius: 4px;
+    margin: 10px;
+    padding: 05px;
+    border-radius: 08px;
     border: solid 1px white;
-
   }
 
   .moviecard-synopsis-container p {
