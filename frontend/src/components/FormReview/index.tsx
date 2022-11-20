@@ -1,66 +1,74 @@
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 import { requestBackend } from 'util/requests';
-import { useHistory } from "react-router";
+import { useHistory } from 'react-router';
 
-import "./styles.css";
-import { toast } from "react-toastify";
+import './styles.css';
+import { toast } from 'react-toastify';
 
 type Props = {
-    value?: boolean;
-    placeholder?: string;
-    valueMovieId?: string;
-    onCreate: Function;
-}
+  value?: boolean;
+  placeholder?: string;
+  valueMovieId?: string;
+  onCreate: Function;
+};
 type FormState = {
-    text: string;
-    movieId: number;
-    userId: number;
-}
+  text: string;
+  movieId: number;
+  userId: number;
+};
 const FormReview = ({ value, placeholder, valueMovieId, onCreate }: Props) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormState>();
+  const history = useHistory();
 
-    const { register, handleSubmit, formState: {errors} } = useForm<FormState>();
-    const  history = useHistory();
+  const onSubmit = (data: FormState) => {
+    const payload = {
+      ...data,
+      movieId: valueMovieId,
+    };
+    // console.log(payload);
 
-    const onSubmit = (data: FormState) => {
-      const payload = {
-          ...data,
-          movieId: valueMovieId
-      }
-      // console.log(payload);
-      
-      requestBackend({ 
-          url: '/reviews', 
-          method: 'POST',
-          withCredentials: true, 
-          data: payload
-        })
-            .then(() => {  
-                onCreate();
-                toast.info('Obrigado pela avaliação!');
-            })
-        }
-    
-    return(
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-review-container">
-                <div className="margin-botton-30">
-                    <input
-                        type="text"
-                        id="TextReview"
-                        disabled = {value}
-                        className={`form-control input-review ${errors.text ? 'is-invalid' : ''} `}
-                        placeholder={placeholder}
-                        {...register("text", { required: "Avaliação vazia não salva!" })}
-                    />
-                    {errors.text && (
-                        <div className="errorvalidation-review">
-                            {errors.text.message}
-                        </div>
-                    )}
-                </div>
-                <button className="form-control btn-review btn-primary">SALVAR AVALIAÇÃO</button>
-            </div>
-        </form>
-    );
+    requestBackend({
+      url: '/reviews',
+      method: 'POST',
+      withCredentials: true,
+      data: payload,
+    })
+      .then(() => {
+        onCreate();
+        toast.info('Obrigado pela avaliação!');
+      })
+      .catch(() => {
+        toast.error('Erro: avaliação não foi cadastrada');
+      });
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-review-container">
+        <div className="margin-botton-30">
+          <input
+            type="text"
+            id="TextReview"
+            disabled={value}
+            className={`form-control input-review ${
+              errors.text ? 'is-invalid' : ''
+            } `}
+            placeholder={placeholder}
+            {...register('text', { required: 'Avaliação vazia não salva!' })}
+          />
+          {errors.text && (
+            <div className="errorvalidation-review">{errors.text.message}</div>
+          )}
+        </div>
+        <button className="form-control btn-review btn-primary">
+          SALVAR AVALIAÇÃO
+        </button>
+      </div>
+    </form>
+  );
 };
 export default FormReview;

@@ -2,6 +2,7 @@
     display: block;
     flex-direction: column;
     align-items: center; 
+    margin-top: 05px;
 }
 
 .input-review {
@@ -9,7 +10,7 @@
     height: 50px;
     text-align: center;
     background-color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .input-review::placeholder {
@@ -27,9 +28,34 @@
 }
 
 .btn-review {
-    height: 40px;
+    height: 50px;
     font-size: 18px;
     font-weight: bold;
+}
+
+.errorvalidation-review {
+    color: white;
+}
+
+@media (min-width: 576px) {
+
+    .form-review-container {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-review {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .btn-review {
+        width: 496px;
+        font-weight: bold;
+    }
+    
 }
 
 @media (min-width: 1200px) {

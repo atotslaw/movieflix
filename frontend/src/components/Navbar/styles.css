@@ -1,6 +1,6 @@
 .main-nav {
     padding-left: 10px;
-    min-height: 70px;
+    min-height: 60px;
 }
 
 .nav-logo-text, .nav-logo-text:hover  {
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-    width: 380px;
+    width: 300px;
 }
 
 .main-menu a {
@@ -51,15 +51,14 @@
 @media (min-width: 576px) {
 
     .main-menu a {
-        padding-left: 40px;
+        padding-left: 30px;
 
     }
 
     .nav-login-logout {
         display: unset;
-        margin-right: 40px;
+        margin-right: 20px;
     }
-
 }
 
 @media (min-width: 768px) {

@@ -1,15 +1,13 @@
 .home-container {
     display: flex;
     width: 100%;
-    justify-content: space-around;
     padding: 20px 10px 33px 10px;
-    height: 515px;
+    justify-content: space-around;
 }
 
-.home-card {
+.home-login-container {
     display: flex;
     flex-direction: column-reverse;
-    border-radius: 20px;
 }
 
 .home-banner-container {
@@ -36,22 +34,18 @@
 
 @media (min-width: 768px) {
 
-    .home-container {
-        margin-top: 40px;
+    .home-login-container {
+      padding: 20px 20px 10px 20px;
     }
 }
-
-
+  
 @media (min-width: 1200px) {
 
-    .home-card {
-        padding-top: 40px;
-    }
-    
     .home-banner-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         margin-top: 40px;
         width: 450px;
     }
@@ -72,7 +66,6 @@
     .home-banner-container svg {
         width: 100%;
     }
-
 }
 
 @media (min-width: 1400px) {
@@ -88,6 +81,10 @@
 
     .home-banner-container p {
         font-size: 24px;
+    }
+
+    .home-login-container {
+        padding-top: 20px;
     }
 
 }
