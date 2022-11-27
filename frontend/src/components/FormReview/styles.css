@@ -90,16 +90,12 @@
         margin-bottom: 20px;
     }
     
-    .input-review::placeholder {
-        text-align: left;
-        color: #9E9E9E;
-        font-weight: normal;
-    }
     
     .input-review:focus {
+        width: 832px;
         text-align: left;
-        background-color: #fff;
         color: #9E9E9E;
+        background-color: #fff;
     }
 
     .btn-review {
