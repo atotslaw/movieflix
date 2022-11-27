@@ -11,6 +11,7 @@ import MovieReviewsLoader from './MoviesReviewsLoader';
 import MovieDetailscard from 'components/MovieDetailscard';
 
 import './styles.css';
+import { hasAnyRoles } from 'util/auth';
 
 type UrlParams = {
   movieId: string;
@@ -75,13 +76,15 @@ const MovieReviews = () => {
         </div>
       )}
 
-      <div className="movie-reviews-frm">
-        <FormReview
-          placeholder="Deixe suas avaliações aqui"
-          valueMovieId={movieId}
-          onCreate={() => getReviews()}
-        />
-      </div>
+      {hasAnyRoles(['ROLE_MEMBER']) && (
+        <div className="movie-reviews-frm">
+          <FormReview
+            placeholder="Deixe suas avaliações aqui"
+            valueMovieId={movieId}
+            onCreate={() => getReviews()}
+          />
+        </div>
+      )}
 
       <div className="movie-reviews-list">
         <div className="col-sm-6 col-lg-6 col-xl-6 reviews-list">

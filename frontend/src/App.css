@@ -22,38 +22,40 @@ a, a:hover {
 }
 
 .base-card {
-    background-color: #6C6C6C;
-    border-radius: 04px;
-  }
+  border-radius: 04px;
+  background-color: #6C6C6C;
+  box-shadow: 0px 4px 20px 0px #00000040;
 
-  .base-input {
-    border-radius: 4px;
-    font-size: 1em;
-    letter-spacing: -0.015em;
-    color: #263238;
-    height: 50px;
-    background-color: #fefefe;
+}
+
+.base-input {
+  border-radius: 4px;
+  font-size: 1em;
+  letter-spacing: -0.015em;
+  color: #263238;
+  height: 50px;
+  background-color: #fefefe;
 /*    width: 264px;
-    margin: 17px;
+  margin: 17px;
 */  
-  }
+}
    
-  .base-input::placeholder {
-    color: #9E9E9E;
-  }
+.base-input::placeholder {
+  color: #9E9E9E;
+}
 
-  @media (min-width: 576px) {
-    .base-input {
-      height: 47px;
-      width: 384px;
-      margin: 0px;
-    }
+@media (min-width: 576px) {
+  .base-input {
+    height: 47px;
+    width: 384px;
+    margin: 0px;
   }
+}
 
-  @media (min-width: 768px) {
-    .base-input {
-      height: 47px;
-      width: 384px;
-      margin: 0px;
-    }
+@media (min-width: 768px) {
+  .base-input {
+    height: 47px;
+    width: 384px;
+    margin: 0px;
   }
+}

@@ -68,8 +68,8 @@ const Catalog = () => {
   }, [getMovies]);
 
   return (
-    <div className="container my-4 catalog-container">
-      <div className="row catalog-title-container">
+    <div className="catalog-container container ">
+      <div className="catalog-title-container">
         <MovieFilter onSubmitFilter={handleSubmitFilter} />
       </div>
 
@@ -78,7 +78,7 @@ const Catalog = () => {
           <CardLoader />
         ) : (
           page?.content.map((movie) => (
-            <div className="col-sm-6 col-lg-6 col-xl-3" key={movie.id}>
+            <div className="col-sm-6 col-md-6 col-lg-3 col-xl-3" key={movie.id}>
               <Link to={`/movies/${movie.id}`}>
                 <MovieCard movie={movie} />
               </Link>

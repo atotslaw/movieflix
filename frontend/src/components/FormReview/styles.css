@@ -52,25 +52,90 @@
     }
 
     .btn-review {
-        width: 496px;
+        width: 100%;
         font-weight: bold;
     }
-    
+
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
 
     .form-review-container {
-        display: block;
-        flex-direction: column;
         align-items: center;
     }
 
     .input-review {
         width: 100%;
         text-align: center;
+        margin-bottom: 15px;
     }
 
+    .btn-review {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    
+    .form-review-container {
+        width: 912px;
+        height: 160px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .input-review {
+        width: 832px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .input-review::placeholder {
+        text-align: left;
+        color: #9E9E9E;
+        font-weight: normal;
+    }
+    
+    .input-review:focus {
+        text-align: left;
+        background-color: #fff;
+        color: #9E9E9E;
+    }
+
+    .btn-review {
+        width: 400px;
+    }
+
+    
+}
+
+@media (min-width: 1200px) {
+
+    .form-review-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .input-review {
+        width: 1040px;
+        text-align: center;
+    }
+
+    .input-review::placeholder {
+        text-align: left;
+        color: #9E9E9E;
+        font-weight: normal;
+    }
+    
+    .input-review:focus {
+        width: 1040px;
+        text-align: left;
+        background-color: #fff;
+        color: #9E9E9E;
+    }
+ 
     .btn-review {
         width: 334px;
         font-weight: bold;

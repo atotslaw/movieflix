@@ -1,6 +1,22 @@
 .catalog-container {
+    margin-top: 20px;
+    color: #ffffff;
+    padding: 0 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1120px;
+  }
+  
+
+  .catalog-title-container {
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+  
+/*
+.catalog-container {
     font-size: 18px;
-    max-width: 1200px;
+    margin-top: 20px;
 }
 
 .catalog-title-container  {
@@ -47,7 +63,7 @@
     }
 
 }
-
+*/
 @media (min-width: 1200px) {
 
     .catalog-container {
@@ -55,20 +71,12 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-
     }
     
     .catalog-title-container  {
-        width: 1180px;
+        max-width: 1120px;
         height: 80px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     } 
-    
-    .card-container {
-        width: 258px;
-        height: 322px;
-        padding: 0;        
-    }
 
 }
-
